@@ -4,5 +4,11 @@
         <a class="navbar-brand" href="{% url 'home' %}">COVID-Test</a>
         <a class="navbar-brand" href="{% url 'home' %}">Informació</a>
         <a class="navbar-brand" href="{% url 'consultes' %}">Consultes</a>
+        {% if user.is_authenticated %}
+            <a class="navbar-brand" href="{% url 'logout' %}">log Out</a>
+        {% else %}
+            <a class="navbar-brand" href="{% url 'login' %}">Log In</a>
+            <a class="navbar-brand" href="{% url 'logout' %}">log Out</a>
+        {% endif %}
    </nav>
 </header>
