@@ -13,12 +13,12 @@ class Resultat(models.Model):
 
 class Test(models.Model):
     data = models.DateTimeField(default = timezone.now())
-    usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE())
-    resultat = models.ForeignKey(Resultat, on_delete=models.CASCADE())
+    usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE)
+    resultat = models.ForeignKey(Resultat, on_delete=models.CASCADE)
 
 class PreguntesTest(models.Model):
-    test = models.ForeignKey(Test, on_delete=models.CASCADE())
-    pregunta = models.ForeignKey(Pregunta, on_delete=models.CASCADE())
+    test = models.ForeignKey(Test, on_delete=models.CASCADE)
+    pregunta = models.ForeignKey(Pregunta, on_delete=models.CASCADE)
 
 class RespostaConsulta(models.Model):
     resposta = models.CharField(max_length=100)
@@ -26,5 +26,5 @@ class RespostaConsulta(models.Model):
 class Consulta(models.Model):
     consulta = models.CharField(max_length=100)
     categoria = models.CharField(max_length=100)
-    resposta = models.ForeignKey(RespostaConsulta, on_delete=models.CASCADE())
-    usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE())
+    resposta = models.ForeignKey(RespostaConsulta, on_delete=models.CASCADE)
+    usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE)

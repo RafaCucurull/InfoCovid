@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Pregunta, Resultat, Test, PreguntesTest, RespostaConsulta, Consulta
+from .models import Pregunta, Resultat, Test, PreguntesTest, RespostaConsulta, Consulta
 
 
 class PreguntaAdmin(admin.ModelAdmin):
