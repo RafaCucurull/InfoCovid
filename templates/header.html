@@ -13,9 +13,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Informació</a>
             </li>
+            {% if user.is_authenticated %}
             <li class="nav-item">
-                <a class="nav-link" href="#">Consultes</a>
+                <a class="nav-link" href="{% url 'consultes' %}">Consultes</a>
             </li>
+            {% endif %}
             <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
@@ -27,6 +29,12 @@
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'login' %}">Log In<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'logout' %}">Log Out<span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

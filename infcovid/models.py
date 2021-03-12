@@ -26,5 +26,5 @@ class RespostaConsulta(models.Model):
 class Consulta(models.Model):
     consulta = models.CharField(max_length=100)
     categoria = models.CharField(max_length=100)
-    resposta = models.ForeignKey(RespostaConsulta, on_delete=models.CASCADE)
-    usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE)
+    resposta = models.ForeignKey(RespostaConsulta, on_delete=models.CASCADE, null = True)
+    usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE, null = True)

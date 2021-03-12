@@ -4,6 +4,17 @@
 
 {% block content %}
 
-<b>Consultes</b>
+<body>
+
+  <h1>Welcome to Our Company</h1>
+  <h1>Introdueixi la seva consulta</h1>
+
+  <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Enviar</button>
+  </form>
+
+</body>
 
 {% endblock %}
