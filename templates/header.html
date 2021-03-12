@@ -7,8 +7,9 @@
         {% if user.is_authenticated %}
             <a class="navbar-brand" href="{% url 'logout' %}">log Out</a>
         {% else %}
+            <a class="navbar-brand" href="{% url 'register' %}">Sign Up</a>
             <a class="navbar-brand" href="{% url 'login' %}">Log In</a>
-            <a class="navbar-brand" href="{% url 'logout' %}">log Out</a>
+            <a class="navbar-brand" href="{% url 'logout' %}">Log Out</a>
         {% endif %}
    </nav>
 </header>
