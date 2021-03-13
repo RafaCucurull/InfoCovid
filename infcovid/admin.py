@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Pregunta, Resultat, Test, PreguntesTest, RespostaConsulta, Consulta
+from .models import Pregunta, Resultat, Test, PreguntaTest, RespostaConsulta, Consulta
 
 
 class PreguntaAdmin(admin.ModelAdmin):
@@ -23,11 +23,11 @@ class TestAdmin(admin.ModelAdmin):
 admin.site.register(Test, TestAdmin)
 
 
-class PreguntesTestAdmin(admin.ModelAdmin):
+class PreguntaTestAdmin(admin.ModelAdmin):
     pass
 
 
-admin.site.register(PreguntesTest, PreguntesTestAdmin)
+admin.site.register(PreguntaTest, PreguntaTestAdmin)
 
 
 class RespostaConsultaAdmin(admin.ModelAdmin):

@@ -16,7 +16,7 @@ class Test(models.Model):
     usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE)
     resultat = models.ForeignKey(Resultat, on_delete=models.CASCADE)
 
-class PreguntesTest(models.Model):
+class PreguntaTest(models.Model):
     test = models.ForeignKey(Test, on_delete=models.CASCADE)
     pregunta = models.ForeignKey(Pregunta, on_delete=models.CASCADE)
 

@@ -12,8 +12,7 @@ def consultes(request):
         form = ConsultaForm(request.POST)
         if form.is_valid():
             obj = form.save()
-            obj.username = request.user
-            print(obj.username)
+            obj.usuari = request.user
             obj.save()
             return redirect('consultes')
     else:
