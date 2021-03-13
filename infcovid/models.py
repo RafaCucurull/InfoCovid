@@ -7,24 +7,36 @@ class Pregunta(models.Model):
     enunciat = models.CharField(max_length=100)
     resposta = models.CharField(max_length=100)
 
+
 class Resultat(models.Model):
     resultat = models.CharField(max_length=100)
 
 
 class Test(models.Model):
-    data = models.DateTimeField(default = timezone.now())
+    data = models.DateTimeField(default=timezone.now())
     usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE)
     resultat = models.ForeignKey(Resultat, on_delete=models.CASCADE)
+
 
 class PreguntaTest(models.Model):
     test = models.ForeignKey(Test, on_delete=models.CASCADE)
     pregunta = models.ForeignKey(Pregunta, on_delete=models.CASCADE)
 
+
 class RespostaConsulta(models.Model):
     resposta = models.CharField(max_length=100)
 
+
 class Consulta(models.Model):
     consulta = models.CharField(max_length=100)
-    categoria = models.CharField(max_length=100)
-    resposta = models.ForeignKey(RespostaConsulta, on_delete=models.CASCADE, null = True)
-    usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE, null = True)
+    CATEGORIA_CHOICES = (
+        ('I', 'Informació'),
+        ('RE', 'Restriccions'),
+        ('MS', 'Mascaretes'),
+        ('SI', 'Símptomes'),
+    )
+    categoria = models.CharField(max_length=9,
+                                 choices=CATEGORIA_CHOICES,
+                                 default='I')
+    resposta = models.ForeignKey(RespostaConsulta, on_delete=models.CASCADE, null=True)
+    usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE, null=True)
