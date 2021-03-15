@@ -24,7 +24,7 @@ def consultes(request):
 
 
 def mostrarConsultes(request):
-    queryset = Consulta.objects.all()
+    queryset = Consulta.objects.filter(usuari = request.user)
     context = {
         "object_list": queryset
     }
