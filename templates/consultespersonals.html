@@ -1,20 +1,19 @@
-{% extends 'base.html' %}
 
-{% block title %}Consultes personals{% endblock %}
+{% block title %}Consultes personals<br/>{% endblock %}
 
 {% block content %}
 
 <body>
 
-<h1>Hola</h1>
-
-{ % for obj in object_list % }
+{% for obj in object_list %}
 
 {{ obj.consulta }}<br/>
 
 {{ obj.categoria }}<br/>
 
 {{ obj.resposta }}<br/>
+
+{% endfor %}
 
 
 </body>
