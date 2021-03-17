@@ -5,7 +5,13 @@ from django.utils import timezone
 
 class Pregunta(models.Model):
     enunciat = models.CharField(max_length=100)
-    resposta = models.CharField(max_length=100)
+    RESPOSTA_CHOICES = (
+        ('YES', 'Sí'),
+        ('NO', 'No'),
+    )
+    resposta = models.CharField(max_length=9,
+                                choices=RESPOSTA_CHOICES,
+                                default='YES')
 
 
 class Resultat(models.Model):
@@ -13,14 +19,10 @@ class Resultat(models.Model):
 
 
 class Test(models.Model):
+    Pregunta = models.ManyToManyField(Pregunta)
     data = models.DateTimeField(default=timezone.now())
     usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE)
     resultat = models.ForeignKey(Resultat, on_delete=models.CASCADE)
-
-
-class PreguntaTest(models.Model):
-    test = models.ForeignKey(Test, on_delete=models.CASCADE)
-    pregunta = models.ForeignKey(Pregunta, on_delete=models.CASCADE)
 
 
 class RespostaConsulta(models.Model):
