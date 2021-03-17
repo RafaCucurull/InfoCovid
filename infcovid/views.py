@@ -29,3 +29,6 @@ def mostrarConsultes(request):
         "object_list": queryset
     }
     return render(request, 'consultespersonals.html', context)
+
+def mostrarPerfil(request):
+    return render(request, 'profile.html')

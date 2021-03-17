@@ -1,21 +1,26 @@
+{% extends 'base.html' %}
 
-{% block title %}Consultes personals<br/>{% endblock %}
+
+{% block title %}Consultes personals{% endblock %}
 
 {% block content %}
+    </br></br></br>
+    <body>
+    {% for obj in object_list %}
+        <div style="width:500px;height:105px;border:1px solid #000;">
+            <p>Consulta: {{ obj.consulta }}</p>
 
-<body>
+            {% if brand.website %}
+                <p>Resposta: {{ obj.resposta }}></p>
+            {% else %}
+                <p>Resposta: Pendent</p>
+            {% endif %}
+            <p>Categoria: {{ obj.categoria }}</p>
+        </div>
 
-{% for obj in object_list %}
-
-{{ obj.consulta }}<br/>
-
-{{ obj.categoria }}<br/>
-
-{{ obj.resposta }}<br/>
-
-{% endfor %}
+    {% endfor %}
 
 
-</body>
+    </body>
 
 {% endblock %}
