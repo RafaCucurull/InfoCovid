@@ -45,9 +45,15 @@ def test(request):
         pregunta_2 = PreguntaForm(request.POST)
         pregunta_3 = PreguntaForm(request.POST)
         if pregunta_1.is_valid() and pregunta_2.is_valid() and pregunta_3.is_valid() :
-            pregunta_1.save()
-            pregunta_2.save()
-            pregunta_3.save()
+            pr1 = pregunta_1.save()
+            if pr1.resposta == pr1.correcta:
+                print('hola')
+            pr2=pregunta_2.save()
+            if pr2.resposta == pr2.correcta:
+                print('hola')
+            pr3=pregunta_3.save()
+            if pr3.resposta == pr3.correcta:
+                print('hola')
             return redirect('test')
     else:
         pregunta_1 = PreguntaForm()
