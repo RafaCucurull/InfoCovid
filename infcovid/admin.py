@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Pregunta, Resultat, Test, RespostaConsulta, Consulta
+from .models import Pregunta, Test, RespostaConsulta, Consulta
 
 
 class PreguntaAdmin(admin.ModelAdmin):
@@ -7,13 +7,6 @@ class PreguntaAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Pregunta, PreguntaAdmin)
-
-
-class ResultatAdmin(admin.ModelAdmin):
-    pass
-
-
-admin.site.register(Resultat, ResultatAdmin)
 
 
 class TestAdmin(admin.ModelAdmin):

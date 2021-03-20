@@ -13,16 +13,21 @@ class Pregunta(models.Model):
                                 choices=RESPOSTA_CHOICES,
                                 default='YES')
 
-
-class Resultat(models.Model):
-    resultat = models.CharField(max_length=100)
+    CORRECTA_CHOICES = (
+        ('YES', 'Sí'),
+        ('NO', 'No'),
+    )
+    correcta = models.CharField(max_length=9,
+                                choices=CORRECTA_CHOICES,
+                                default='YES')
 
 
 class Test(models.Model):
-    Pregunta = models.ManyToManyField(Pregunta)
+    auto_increment_id = models.AutoField(primary_key=True)
+    pregunta = models.ManyToManyField(Pregunta)
     data = models.DateTimeField(default=timezone.now())
     usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE)
-    resultat = models.ForeignKey(Resultat, on_delete=models.CASCADE)
+    resultat = models.CharField(max_length=100)
 
 
 class RespostaConsulta(models.Model):
