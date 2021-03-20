@@ -9,6 +9,8 @@ from .models import Consulta, Pregunta, Test
 def homepage(request):
     return render(request, 'home.html')
 
+def restriccions(request):
+    return render(request, 'restric.html')
 
 def consultes(request):
     if request.method == 'POST':
