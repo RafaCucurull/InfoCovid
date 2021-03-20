@@ -13,13 +13,11 @@
     <form method="post">
         {% csrf_token %}
         {{ pregunta_1.as_p }}
-        <button type="submit">Enviar</button>
     </form>
     <p>Pregunta 2: {{ object_list.1.enunciat }}</p>
     <form method="post">
         {% csrf_token %}
         {{ pregunta_1.as_p }}
-        <button type="submit">Enviar</button>
     </form>
     <p>Pregunta 3: {{ object_list.2.enunciat }}</p>
     <form method="post">

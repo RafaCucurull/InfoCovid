@@ -1,3 +1,4 @@
+from django import forms
 from django.forms import ModelForm, Textarea
 from infcovid.models import Consulta, Pregunta
 
@@ -10,6 +11,8 @@ class ConsultaForm(ModelForm):
 
 
 class PreguntaForm(ModelForm):
+    choice_field = forms.MultipleChoiceField(choices=Pregunta.RESPOSTA_CHOICES, widget=forms.CheckboxSelectMultiple)
+
     class Meta:
         model = Pregunta
-        fields = ('resposta',)
+        fields = ('choice_field',)
