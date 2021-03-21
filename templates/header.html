@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="#">Menú</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -13,34 +13,34 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Informació</a>
             </li>
-            {% if user.is_authenticated %}
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'restriccions' %}">Restriccions</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'consultes' %}">Consultes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'test' %}">Test COVID-19</a>
-            </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'consultes' %}">Consultes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'test' %}">Test COVID-19</a>
+                </li>
             {% endif %}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">Perfil</a>
+                   aria-expanded="false">Perfil</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
                     {% if user.is_authenticated %}
-                    <a class="dropdown-item" href="{% url 'perfil' %}">Informació personal</a>
-                    <a class="dropdown-item" href="{% url 'consultesper' %}">Consultes realitzades</a>
-                    <a class="dropdown-item" href="{% url 'logout' %}">Tancar sessió</a>
+                        <a class="dropdown-item" href="{% url 'perfil' %}">Informació personal</a>
+                        <a class="dropdown-item" href="{% url 'consultesper' %}">Consultes realitzades</a>
+                        <a class="dropdown-item" href="{% url 'logout' %}">Tancar sessió</a>
                     {% else %}
-                    <a class="dropdown-item" href="{% url 'login' %}">Iniciar sessió</a>
+                        <a class="dropdown-item" href="{% url 'login' %}">Iniciar sessió</a>
                     {% endif %}
                 </div>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-2 my-lg-0" method="link" action="{% url 'cercausuaris' %}">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
         </form>
     </div>
 </nav>
