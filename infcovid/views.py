@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+
+from users.models import CustomUser
 from .forms import ConsultaForm, PreguntaForm
 from .models import Consulta, Pregunta, Test
 
@@ -9,8 +11,10 @@ from .models import Consulta, Pregunta, Test
 def homepage(request):
     return render(request, 'home.html')
 
+
 def restriccions(request):
     return render(request, 'restric.html')
+
 
 def consultes(request):
     if request.method == 'POST':
@@ -74,3 +78,15 @@ def test(request):
         'pregunta_3': pregunta_3,
     }
     return render(request, 'test.html', context)
+
+
+def cercausuaris(request):
+    email_usuari = request.GET.get('usuari')
+    query = CustomUser.objects.filter(email=email_usuari)
+    if len(query) == 0:
+        return render(request, "nousuaris.html")
+    else:
+        context = {
+            "object_list": query,
+        }
+        return render(request, "llistausuaris.html", context)
