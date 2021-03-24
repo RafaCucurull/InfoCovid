@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <html>
+    <style>
+        p {
+            text-align: justify;
+        }
+        ul {
+            text-align: justify;
+        }
+        li {
+            text-align: justify;
+        }
+    </style>
+    </html>
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-1">Mascaretes</h1>
+                <p style="text-align: justify">En aquest apartat disposa de diverses imatges sobre les diferents
+                    mascaretes
+                    que es troben disponibles en el mercat actualment, juntament amb informació important sobre
+                    aquestes,
+                    com pot ser les persones adequades a portar cadascuna, el nivell de protecció que ofereixen, entre
+                    d'altres
+                    aspectes realment importants a l'hora d'escollir quina mascareta s'ha de dur.</p>
+                <p><a class="btn btn-primary btn-lg" href="{% static '../static/030520_GUIA_COMPRA_MASCARILLAS.pdf' %}"
+                      role="button">Document oficial &raquo;</a></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Higiènica</h2>
+                    <h6><strong>Descripció</strong></h6>
+                    <p>Són una barrera per a la transmissió d'agents infecciosos.</p>
+                    <h6><strong>Protecció</strong></h6>
+                    <p>Des de dins cap a fora.</p>
+                    <h6><strong>Qui l'ha de portar posada?</strong></h6>
+                    <p>Persones sanes.</p>
+                    <h6><strong>Tipus</strong></h6>
+                    <ul>
+                        <li>No reutilitzables: s'han de llençar després del seu ús i
+                            tenen una eficàcia igual o superior al 95%.
+                        </li>
+                        <li>Reutilitzables: es poden rentar per un nou ús, un nombre limitat de cops i tenen una
+                            eficàcia
+                            igual
+                            o superior al 90%.
+                        </li>
+                    </ul>
+                    <p><a class="btn btn-secondary" href="{% static '../static/higienica.jpeg' %}" role="button">Imatge
+                        &raquo;</a></p>
+                </div>
+                <div class="col-md-6">
+                    <h2>Quirúrgica</h2>
+                    <h6><strong>Descripció</strong></h6>
+                    <p>Dissenyades principalment per a que, durant una operació quirúrgica, el metge no contamini al
+                        malalt i es protegeixi d'esquitxades o sang.</p>
+                    <h6><strong>Protecció</strong></h6>
+                    <p>Des de dins cap a fora i només parcial des de fora cap a dins</p>
+                    <h6><strong>Qui l'ha de portar posada?</strong></h6>
+                    <p>Persones simptomàtiques o assimptomàtiques positives l'han de prioritzar.</p>
+                    <h6><strong>Tipus</strong></h6>
+                    <ul>
+                        <li>Tipus I: tenen una eficàcia igual o superior al 95%.
+                        </li>
+                        <li>Tipus II: tenen una eficàcia igual o superior al 98%.
+                        </li>
+                    </ul>
+                    <p><a class="btn btn-secondary" href="{% static '../static/quirurgica.jpg' %}" role="button">Imatge
+                        &raquo;</a></p>
+                </div>
+
+                <hr>
+
+            </div> <!-- /container -->
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <h2>FFP</h2>
+                    <h6><strong>Descripció</strong></h6>
+                    <p>Mascareta EPI (Equip de Protecció Individual) de protecció respiratòria utiitzada pels
+                        professionals dels centres sanitaris com a
+                        barrera contra els gèrmens que colonitzen i infecten les mucoses respiratòries dels
+                        pacients.</p>
+                    <h6><strong>Protecció</strong></h6>
+                    <p>Des de dins cap a fora i des de fora cap a dins.</p>
+                    <h6><strong>Qui l'ha de portar posada?</strong></h6>
+                    <p>Aquelles persones que cuidin o estiguin en contacte amb persones simptomàtiques o positius per
+                        COVID-19.</p>
+                    <h6><strong>Tipus</strong></h6>
+                    <ul>
+                        <li>FFP3: eficàcia de filtració del 98%.
+                        </li>
+                        <li>FFP2: eficàcia de filtració del 92%.
+                        </li>
+                        <li>FFP1: eficàcia de filtració del 78%.
+                        </li>
+                    </ul>
+                    <p><a class="btn btn-secondary" href="{% static '../static/ffp.jpg' %}" role="button">Imatge
+                        &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+{% endblock %}

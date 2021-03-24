@@ -3,53 +3,143 @@
 {% block title %} Home {% endblock %}
 
 {% block content %}
+     <html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        header {
+            background-image: url("../static/cov.jpg");
+            background-position: 50% 65%;
+        }
 
-<main role="main">
+        h5 {
+            text-align: justify;
+        }
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a
-                jumbotron and three supporting pieces of content. Use it as a starting point to create something more
-                unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        p {
+            text-align: justify;
+        }
+
+        li {
+            text-align: justify;
+        }
+
+    </style>
+    <body>
+
+    <!-- Header -->
+    <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">COVID-19</h1>
+        <p class="w3-xlarge" style="text-align: center">Malaltia per coronavirus de 2019</p>
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>COVID-19</h1>
+                <h5 class="w3-padding-32"> És una malaltia infecciosa causada pel SARS-CoV-2.</h5>
+
+                <p class="w3-text-grey">La transmissió del SARS-CoV-2 es produeix a través de petites gotes, per
+                    secrecions respiratòries, que es generen al parlar, estornudar, tossir o expirar, que al ser
+                    despreses per un portador (que pot no tenir símptomes de la malaltia o estar incubant-la),
+                    passen directament a una altra persona quan aquesta:</p>
+                <ul class="w3-text-grey">
+                    <li>Toca els objectes o les superfícies on han caigut aquestes gotes i després es toca
+                        els ulls, el nas o la boca.
+                    </li>
+                    <li>Inhala aquestes gotes per proximitat amb la persona infectada.</li>
+                </ul>
+            </div>
+
+            <div class="w3-third w3-center">
+                <img class="w3-padding-64" src="../static/sars-cov2.jpg"
+                     style="width: 250px;height: 350px;margin-left: 64px">
+            </div>
         </div>
     </div>
 
-    <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                    mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
-                    mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <img class="w3-padding-64" src="../static/efectes-cov.png"
+                     style="width: 250px;height: 350px;margin-right: 64px">
+                <img class="w3-padding-64" src="../static/effects-cov.jpeg"
+                     style="width: 250px;height: 350px;margin-right: 64px">
             </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                    mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
-                    mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-                    porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                    ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+
+            <div class="w3-twothird">
+                <h1>Efectes en la salut</h1>
+                <h5 class="w3-padding-32">A mesura que avança la pandèmia anem aprenent que aquesta malaltia
+                    afecta a molts òrgans a part dels pulmons, i hi ha moltes formes en les que l'infecció
+                    pot afectar a la salut d'una persona.
+                </h5>
+
+                <p class="w3-text-grey">Tot i que la majoria de les persones amb COVID-19 es recuperen i recobren
+                    la salut, alguns pacients poden tenir símptomes que poden durar setmanes o inclús mesos
+                    després de recuperar-se de la malaltia aguda. Inclús les persones que no són hospitalitzades
+                    i tenen una malaltia lleu poden presentar símptomes persistens o tardans.</p>
+
+
+                <p class="w3-text-grey">Els símptomes a llarg termini més comunament notificats són:</p>
+                <ul class="w3-text-grey">
+                    <li>Fatiga.</li>
+                    <li>Dificultat per respirar.</li>
+                    <li>Tos.</li>
+                    <li>Dolor en les articulacions.</li>
+                    <li>Dolor de pit.</li>
+                </ul>
+
+                <p class="w3-text-grey">Aquests són altres símptomes a llarg termini notificats:</p>
+                <ul class="w3-text-grey">
+                    <li>Dificultat per pensar i concentrar-se.</li>
+                    <li>Depressió.</li>
+                    <li>Dolor muscular.</li>
+                    <li>Dolor de cap.</li>
+                    <li>Febre intermitent.</li>
+                    <li>Cor que batega ràpid o molt fort (palpitacions).</li>
+                </ul>
             </div>
         </div>
+    </div>
 
-        <hr>
+    <!-- Third Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>Duració del virus en superfícies</h1>
+                <h5 class="w3-padding-32">S'han realitzat, i es continuaràn realitzant, estudis sobre la durada
+                    del virus en determinades superfícies, amb les quals totes les persones matenim
+                    contacte en el dia a dia. Són 2 els estudis que s'han acabat prenent de base per tal de que la
+                    comunitat científica arribi més o menys a un consens: un de la revista científica <i>The New England
+                        Journal of Medicine</i> i l'altre de la publicació britànica <i>Journal of Hospital
+                        Infection</i>.
+                </h5>
 
-    </div> <!-- /container -->
+                <p class="w3-text-grey">A continuació s'exposen les superfícies i materials més comuns, i la durada
+                    del virus en elles. Però tots són valors variables segons certes característiques del medi,
+                    com ara la temperatura.</p>
+                <ul class="w3-text-grey">
+                    <li>Acer inoxidable i plàstic: 3 dies. Això són refrigeradors, olles, paelles, etc.</li>
+                    <li>Coure: 4 hores.</li>
+                    <li>Cartró: 1 dia. Això són per exemple, paquets de comandes online.</li>
+                    <li>Estany i al·lumini: 2 hores. Això són les llaunes, el paper d'al·lumini, etc.</li>
+                    <li>Vidre i ceràmica: 5 dies. Això són vassos, espills, ulleres, i plats, tasses, etc.</li>
+                </ul>
+            </div>
+            <div class="w3-third w3-center">
+                <img class="w3-padding-64" src="../static/cov-superficies(2).jpg"
+                     style="width: 250px;height: 350px;margin-left: 64px">
+            </div>
+        </div>
+    </div>
 
-</main>
-
-<footer class="container">
-    <p>&copy; Company 2017-2020</p>
-</footer>
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+        <h1 class="w3-margin w3-xlarge">Recorda: més val prevenir que curar!</h1>
+    </div>
+    </body>
+    </html>
 {% endblock %}
