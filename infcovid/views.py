@@ -11,6 +11,7 @@ from .models import Consulta, Pregunta, Test
 def homepage(request):
     return render(request, 'home.html')
 
+
 def mascaretes(request):
     return render(request, 'mascaretes.html')
 
@@ -66,10 +67,11 @@ def test(request):
             if covid >= 2:
                 test_object.resultat = "Positiu"
                 test_object.save()
+                return redirect('positiu')
             else:
                 test_object.resultat = "Negatiu"
                 test_object.save()
-            return redirect('test')
+                return redirect('negatiu')
     else:
         pregunta_1 = PreguntaForm()
         pregunta_2 = PreguntaForm()
@@ -93,3 +95,11 @@ def cercausuaris(request):
             "object_list": query,
         }
         return render(request, "llistausuaris.html", context)
+
+
+def positiu(request):
+    return render(request, 'possible_positiu.html')
+
+
+def negatiu(request):
+    return render(request, 'negatiu.html')

@@ -10,4 +10,6 @@ urlpatterns = [
     path('restriccions/', views.restriccions, name='restriccions'),
     path('cercausuaris/', views.cercausuaris, name='cercausuaris'),
     path('mascaretes/', views.mascaretes, name='mascaretes'),
+    path('positiu/', views.positiu, name='positiu'),
+    path('negatiu/', views.negatiu, name='negatiu'),
 ]
