@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+{% include 'base.html' %}
+{% load static %}
+{% block content %}
+    <html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        header {
+            background-image: url("../static/calm-cov.png");
+            background-position: center;
+        }
+
+        h5, h1 {
+            text-align: justify;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        li {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+    </style>
+    <body>
+
+    <!-- Header -->
+    <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <h1>Tranquil! En base al test realitzat, no és possible que tinguis la malaltia de la COVID-19</h1>
+            <h5 class="w3-padding-32"> Tot i així, siusplau, consulti la següent web de l'Administració Pública i
+                segueixi les indicacions sobre com protegir-se i protegir als altres davant aquesta situació que
+                vivim.</h5>
+
+            <p><a href="https://espanol.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">
+                No dubti en accedir!
+            </a></p>
+        </div>
+    </div>
+    </body>
+    </html>
+
+{% endblock %}
