@@ -17,7 +17,7 @@ def mascaretes(request):
 
 
 def restriccions(request):
-    return render(request, 'restric.html')
+    return render(request, 'restriccions.html')
 
 
 def consultes(request):
