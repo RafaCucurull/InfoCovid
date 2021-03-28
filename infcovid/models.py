@@ -1,3 +1,4 @@
+import django
 from django.db import models
 from users import models as userModels
 from django.utils import timezone
@@ -25,7 +26,7 @@ class Pregunta(models.Model):
 class Test(models.Model):
     auto_increment_id = models.AutoField(primary_key=True)
     pregunta = models.ManyToManyField(Pregunta)
-    data = models.DateTimeField(default=timezone.now())
+    data = models.DateTimeField(default=django.utils.timezone.now)
     usuari = models.ForeignKey(userModels.CustomUser, on_delete=models.CASCADE)
     resultat = models.CharField(max_length=100)
 
